@@ -1,4 +1,4 @@
-title: Researcher
+title: James Keal
 url: "https://jameskeal.com.au"
 baseurl: "/"
 
@@ -17,7 +17,7 @@ sass:
 
 nav:
  - name: "About"
-   link: "/researcher/"
+   link: "/resume/"
  - name: "Resume"
    link: "resume.pdf"
  - name: "Contact"
