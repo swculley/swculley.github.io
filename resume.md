@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 
-<img class="profile-picture" src="https://avatars2.githubusercontent.com/u/2309403?s=300">
+<img class="profile-picture" src="sherlock.jpg">
 
 Hi! I am a junior year student of B.E. Computer Science at Birla Institute of Technology and Science, Pilani.
 
