@@ -3,24 +3,16 @@ layout: default
 is_contact: true
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+## Email
 
-* Phone: [+91-123123](tel:+91-123123)
+* Home: [james@keal.com.au](mailto:james@keal.com.au)
 
----
-
-## Mailing Address
-
-> 221B, Baker Street
->
-> London
->
-> United Kingdom
+* Work: [james.keal@adelaide.edu.au](mailto:james.keal@adelaide.edu.au)
 
 ---
 
 ## Social
 
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
+1. [Facebook](https://www.facebook.com/jameskeal)
+2. [Twitter](https://twitter.com/_keeeal)
+3. [LinkedIn](https://www.linkedin.com/in/jkeal/)
