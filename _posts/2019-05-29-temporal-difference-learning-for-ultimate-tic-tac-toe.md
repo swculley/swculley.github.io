@@ -4,24 +4,56 @@ title: "Temporal difference learning for ultimate tic-tac-toe"
 date: 2019-05-30 10:34:31 +0930
 categories: projects
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+# TemporalUT3
+Temporal difference learning for ultimate tic-tac-toe.
+
+## What is ultimate tic-tac-toe?
+It's like tic-tac-toe, but each square of the game contains another game of tic-tac-toe in it! Win small games to claim the squares in the big game. Simple, right? But there is a catch: Whichever small square you pick is the next big square your opponent must play in. [Read more...](https://docs.riddles.io/ultimate-tic-tac-toe/rules)
 
 ![ultimate tic-tac-toe gif](https://static-content.riddles.io/ultimate-tic-tac-toe-objectives-small-squares.gif)
 
-Jekyll also offers powerful support for code snippets:
+## What is temporal difference learning?
+Temporal difference (TD) learning is a reinforcement learning algorithm trained only using self-play. The algorithm learns by bootstrapping from the current estimate of the value function, i.e. the value of a state is updated based on the current estimate of the value of future states. [Read more...](https://en.wikipedia.org/wiki/Temporal_difference_learning)
 
-```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+## How to use
+
+### Training
+
+To begin training:
+
+```bash
+python train.py
 ```
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+or set the learning hyperparameters using any of the optional arguments:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+```bash
+python train.py --lr LEARN_RATE --a ALPHA --e EPSILON
+```
+
+### Playing
+
+You can play against a trained model using
+
+```bash
+python player.py --params path/to/parameters.params
+```
+
+If no parameters are provided, the opponent will make moves randomly.
+
+## Experiments
+
+Coming soon.
+
+## To-do
+ - [Scale the value of terminal results by the game length to prefer shorter games](https://medium.com/oracledevs/lessons-from-alphazero-connect-four-e4a0ae82af68).
+ - Implement UT3 neural network in other frameworks, eg: TensorFlow.
+ - Make asynchronous, i.e. do self-play, neural net training and model comparison in parallel.
+
+## Requirements
+ - [PyTorch](https://pytorch.org/)
+ - [Progress](https://pypi.org/project/progress/)
+
+## Thanks
+ - [Sam Culley](https://github.com/swculley)
