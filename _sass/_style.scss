@@ -81,6 +81,9 @@ hr {
 	text-align: center;
 }
 
+@import "typography";
+@import "tables";
+
 /* Mobile */
 
 @media (max-width: 800px) {
@@ -131,6 +134,3 @@ hr {
     }
   }
 }
-
-@import "typography";
-@import "tables";
