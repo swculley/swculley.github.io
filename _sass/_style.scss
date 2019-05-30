@@ -125,6 +125,11 @@ hr {
 	#navlist li.nav-list {
 		margin: 0;
 	}
+  .content {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 @import "typography";
