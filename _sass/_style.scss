@@ -48,7 +48,7 @@ hr {
 }
 .nav-list {
   list-style-type: none;
-  margin: 0 5px 0 10px;
+  margin: 0 6px 0 6px;
 }
 .alignable {
   display: inline-block;
@@ -125,8 +125,5 @@ hr {
   }
   #navlist li.pull-left {
     float: none;
-  }
-  #navlist li.nav-list {
-    margin: 0;
   }
 }

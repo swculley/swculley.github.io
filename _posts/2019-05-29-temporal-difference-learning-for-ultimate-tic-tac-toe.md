@@ -2,10 +2,11 @@
 layout: default
 title: "Temporal difference learning for ultimate tic-tac-toe"
 date: 2019-05-30 10:34:31 +0930
-categories: projects
+categories: posts
 ---
 
-# Temporal difference learning for ultimate tic-tac-toe.
+# Temporal difference learning for ultimate tic-tac-toe
+This post walks through a simple implementation
 
 ## What is ultimate tic-tac-toe?
 It's like tic-tac-toe, but each square of the game contains another game of tic-tac-toe in it! Win small games to claim the squares in the big game. Simple, right? But there is a catch: Whichever small square you pick is the next big square your opponent must play in. [Read more...](https://docs.riddles.io/ultimate-tic-tac-toe/rules)
