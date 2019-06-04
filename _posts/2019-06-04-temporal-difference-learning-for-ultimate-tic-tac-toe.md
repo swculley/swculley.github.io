@@ -10,7 +10,7 @@ This post walks through a simple implementation
 ## What is ultimate tic-tac-toe?
 It's like tic-tac-toe, but each square of the game contains another game of tic-tac-toe in it! Win small games to claim the squares in the big game. Simple, right? But there is a catch: Whichever small square you pick is the next big square your opponent must play in. [Read more...](https://docs.riddles.io/ultimate-tic-tac-toe/rules)
 
-![ultimate tic-tac-toe gif](https://static-content.riddles.io/ultimate-tic-tac-toe-objectives-small-squares.gif)
+![ultimate tic-tac-toe gif](/img/ut3.gif)
 
 ## What is temporal difference learning?
 Temporal difference (TD) learning is a reinforcement learning algorithm trained only using self-play. The algorithm learns by bootstrapping from the current estimate of the value function, i.e. the value of a state is updated based on the current estimate of the value of future states. [Read more...](https://en.wikipedia.org/wiki/Temporal_difference_learning)
@@ -43,7 +43,7 @@ If no parameters are provided, the opponent will make moves randomly.
 
 ## Experiments
 
-![ultimate tic-tac-toe results](/img/td-ut3-results.png)
+![ultimate tic-tac-toe results](/img/ut3-results.png)
 
 Coming soon.
 
