@@ -7,6 +7,7 @@ tags: temporal difference, ultimate tic-tac-toe
 [repo]: https://github.com/keeeal/temporal-ut3
 
 # Temporal difference learning for ultimate tic-tac-toe
+###### 4 June 2019
 In this post I will describe the implementation of temporal difference learning that can be found [here][repo]. This amazingly simple algorithm is able to learn entirely through self-play without *any* human knowledge at all except the rules of the game. By way of example, the game we will be playing is ultimate tic-tac-toe, but the same algorithm can be applied to almost any other game with varying degrees of success. This post will assume basic familiarity with machine learning and reinforcement learning concepts, and should be accessible if you understand neural network basics.
 
 ## What is ultimate tic-tac-toe?
