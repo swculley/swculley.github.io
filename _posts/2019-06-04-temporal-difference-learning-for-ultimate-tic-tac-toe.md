@@ -9,20 +9,20 @@ tags: temporal difference, ultimate tic-tac-toe
 # Temporal difference learning for ultimate tic-tac-toe
 ###### 4 June 2019
 
-In this post I will describe the implementation of temporal difference learning that can be found [here][repo]. This amazingly simple algorithm is able to learn entirely through self-play without *any* human knowledge at all except the rules of the game. By way of example, the game we will be playing is [ultimate tic-tac-toe](https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe), but the same algorithm can be applied to almost any other game with varying degrees of success. This post will assume some familiarity with machine learning and reinforcement learning concepts, and should be accessible if you understand the basics of supervised learning with neural networks.
+In this post I will describe an implementation of temporal difference learning that can be found [here][repo]. This amazingly simple algorithm is able to learn entirely through self-play without *any* human knowledge at all, except the rules of the game. By way of example, the game we will be playing is [ultimate tic-tac-toe](https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe), but the same algorithm can be applied to almost any other game with varying degrees of success. This post will assume some familiarity with machine learning and reinforcement learning concepts, and should be accessible if you understand the basics of supervised learning with neural networks.
 
 ## What is ultimate tic-tac-toe?
 
 Let's start with the game. You probably know the original version of [tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). Well ultimate tic-tac-toe is similar, except each of the nine squares contains another smaller game of tic-tac-toe! We'll call the big game the "macro game" and the smaller games "micro games". A player must win micro games to claim corresponding squares in the macro game, the goal being to win three micro games in a row. Simple, right?
 
-Not so fast, there is a catch! The most important rule of ultimate tic-tac-toe is the following: The small square you pick dictates the next big square your opponent must play in. Specifically, whichever row and column you choose to play in the micro game, your opponent is forced to play in the corresponding row and column in the macro game. So for example, if you are first to move and you choose the middle square in the top-right micro game, your opponent must then play a small square in the middle micro board. If this is confusing, take a look at Figure 1. Highlighted squares are where the current player is permitted to play.
+Not so fast, there is a catch! The most important rule of ultimate tic-tac-toe is the following: The small square you pick dictates the next micro game your opponent must play in. Specifically, whichever row and column you choose to play in a micro game, your opponent is forced to play in the corresponding row and column of the macro game. So for example, if you are first to move and you choose the middle square in any one of the micro games, your opponent must then play in the middle of the macro game. If this is confusing, take a look at Figure 1. Highlighted squares indicate where the current player is permitted to play.
 
 ![ultimate tic-tac-toe gif](/img/ut3.gif)
 ###### Figure 1: A game of ultimate tic-tac-toe in progress. [[source]](https://playground.riddles.io/competitions/ultimate-tic-tac-toe/how-to-play)
 
-But what happens if your opponent sends you to a micro game that has already been won or filled? Then you are in luck! If this happens you are allowed to place your next move on any empty square on the entire board.
+But what happens if your opponent sends you to a micro game that has already been won, or is full? Then you are in luck! If this happens you are allowed to place your next move on any empty square on the entire board.
 
-That's it. The game is won when three micro games are won in a row, either horizontally, vertically, or diagonally. The game ends in a draw if all micro games are over and no three of them in a row are owned by the same player.
+That's it. The game is won when three micro games are won in a row, either horizontally, vertically, or diagonally. The game ends in a draw if all micro games are over and no three in a row are owned by the same player.
 
 ## What is temporal difference learning?
 
