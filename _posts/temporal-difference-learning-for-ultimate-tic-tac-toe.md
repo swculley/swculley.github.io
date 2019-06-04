@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Temporal difference learning for ultimate tic-tac-toe"
+tags: temporal difference, ultimate tic-tac-toe
 ---
 
 # Temporal difference learning for ultimate tic-tac-toe
