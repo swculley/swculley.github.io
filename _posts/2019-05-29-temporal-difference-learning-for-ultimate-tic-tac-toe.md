@@ -44,6 +44,8 @@ If no parameters are provided, the opponent will make moves randomly.
 
 ## Experiments
 
+![ultimate tic-tac-toe results](/img/td-ut3-results.png)
+
 Coming soon.
 
 ## To-do
