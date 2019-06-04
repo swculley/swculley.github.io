@@ -4,8 +4,10 @@ title: "Temporal difference learning for ultimate tic-tac-toe"
 tags: temporal difference, ultimate tic-tac-toe
 ---
 
+[repo]: https://github.com/keeeal/temporal-ut3
+
 # Temporal difference learning for ultimate tic-tac-toe
-This post walks through a simple implementation
+In this post I will describe the implementation of temporal difference learning that can be found [here][repo]. This amazingly simple algorithm is able to learn entirely through self-play without *any* human knowledge at all except the rules of the game. By way of example, the game we will be playing is ultimate tic-tac-toe, but the same algorithm can be applied to almost any other game with varying degrees of success. This post will assume basic familiarity with machine learning and reinforcement learning concepts, and should be accessible if you understand neural network basics.
 
 ## What is ultimate tic-tac-toe?
 It's like tic-tac-toe, but each square of the game contains another game of tic-tac-toe in it! Win small games to claim the squares in the big game. Simple, right? But there is a catch: Whichever small square you pick is the next big square your opponent must play in. [Read more...](https://docs.riddles.io/ultimate-tic-tac-toe/rules)
@@ -43,7 +45,7 @@ If no parameters are provided, the opponent will make moves randomly.
 
 ## Experiments
 
-![ultimate tic-tac-toe results](/img/ut3-results.png)
+![ultimate tic-tac-toe results](/img/td-ut3-results.png)
 
 Coming soon.
 
